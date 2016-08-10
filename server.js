@@ -10,7 +10,7 @@ var express = require('express'),
     logger = require('morgan'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    //Routes = require('./routes'),
+    Routes = require('./routes'),
     path = require('path'),
     port = process.env.PORT || 3001,
     app = express();
@@ -31,13 +31,13 @@ mongoose.connect('mongodb://localhost/gear-to-share', (error)=>{
 
 app.post('*', bodyParser.json(),bodyParser.urlencoded({ extended:true}));
 
-//Routes(app);
+Routes(app);
 
 app.listen(port, (error)=>{
     if(error){
         console.error('Server is not working', error);
         process.exit(1); //will exit your node app
     }else {
-        console.log('My gearshare server is running')
+        console.log('My gearshare server is running', port)
     }
 });

@@ -1,0 +1,15 @@
+.form-control {
+    margin: 10px 0px;
+    width:50%;
+}
+.btn {
+    color:white;
+    background-color: black;
+}
+.upload {
+    margin: 10px 0px;
+    padding: 10px;
+}
+select {
+    margin:10px 0px;
+}

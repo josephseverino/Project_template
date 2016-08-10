@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="GearShare">
+<head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="/scripts/app.module.js"></script>
+    <script src="/scripts/app.controller.gear.js"></script>
+    <script src="/scripts/app.factory.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+</head>
+<body ng-controller="gearController as gCtrl" class="container">
+    <h1>Welcome to the page</h1>
+    <form >
+        <label>Email address</label>
+        <input type="text" class="form-control" ng-model="gCtrl.newGear.email" placeholder="Email" />
+        <label>Phone Number</label>
+        <input type="text" class="form-control" ng-model="gCtrl.newGear.phone" placeholder="Phone" />
+        <label>Select the type of Equipment</label>
+        <br />
+        <select>
+          <option value="water">Water Sports</option>
+          <option value="winter">Winter Sports</option>
+          <option value="bike">Biking</option>
+          <option value="misc">Misc</option>
+      </select>
+      <br />
+        <label>Description of your gear</label>
+        <textarea class="form-control" ng-model="gCtrl.newGear.descript" >Enter description here...</textarea>
+        <label>Upload your profile picture </label>
+        <input type="file" class="upload" ng-model="gCtrl.newGear.profile"  />
+        <label> Upload pics of your gear </label>
+        <input type="file" class="upload" ng-model="gCtrl.newGear.pics"  />
+        <button type="submit" class="btn ">Submit form</button>
+    </form>
+</body>
+</html>
