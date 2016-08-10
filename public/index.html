@@ -10,7 +10,7 @@
 </head>
 <body ng-controller="gearController as gCtrl" class="container">
     <h1>Welcome to the page</h1>
-    <form >
+    <form ng-submit="gCtrl.makeSomeGear()">
         <label>Email address</label>
         <input type="text" class="form-control" ng-model="gCtrl.newGear.email" placeholder="Email" />
         <label>Phone Number</label>
